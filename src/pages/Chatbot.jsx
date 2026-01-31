@@ -71,7 +71,7 @@ const Chatbot = () => {
         role: msg.role,
         content: msg.content
       }));
-      
+
       const aiResponse = await chatWithAI(input, chatHistory);
 
       const assistantMessage = {
@@ -187,7 +187,7 @@ const Chatbot = () => {
                       )}
                     </div>
                     <div style={{
-                      background: message.role === 'user' ? '#f0f9ff' : '#f8fafc',
+                      background: message.role === 'user' ? 'rgba(14, 165, 233, 0.1)' : 'var(--glass-bg)',
                       padding: '0.875rem 1rem',
                       borderRadius: '12px',
                       maxWidth: '70%',
@@ -220,7 +220,7 @@ const Chatbot = () => {
                   <Bot size={18} color="white" />
                 </div>
                 <div style={{
-                  background: '#f8fafc',
+                  background: 'var(--glass-bg)',
                   padding: '0.875rem 1rem',
                   borderRadius: '12px',
                   border: '1px solid var(--glass-border)',

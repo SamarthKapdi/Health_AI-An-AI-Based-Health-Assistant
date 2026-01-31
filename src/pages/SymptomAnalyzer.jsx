@@ -28,10 +28,10 @@ const SymptomAnalyzer = () => {
         try {
             setAnalyzing(true);
             setError(null);
-            
+
             // Call Gemini AI to analyze symptoms
             const analysis = await analyzeSymptoms(query);
-            
+
             setResult({
                 risk: analysis.riskLevel,
                 advice: analysis.advice,
@@ -47,7 +47,7 @@ const SymptomAnalyzer = () => {
             console.error('Error analyzing symptoms:', err);
             const msg = err?.message || 'Failed to analyze symptoms. Please check if Gemini API key is configured.';
             setError(msg);
-            
+
             // Fallback to mock data
             const lowerQ = query.toLowerCase();
             let risk = 'Low';
@@ -143,7 +143,7 @@ const SymptomAnalyzer = () => {
                             ))}
                         </ul>
 
-                        <div style={{ background: '#f8fafc', padding: '1rem', borderRadius: '12px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                        <div style={{ background: 'var(--glass-bg)', padding: '1rem', borderRadius: '12px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
                             <strong>Disclaimer:</strong> This is an AI-generated analysis and not a medical diagnosis. Please consult a doctor for accurate advice.
                         </div>
 

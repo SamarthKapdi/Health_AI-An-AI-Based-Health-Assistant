@@ -152,7 +152,7 @@ const History = () => {
 
                                 {item.analysis?.advice && (
                                     <div style={{
-                                        background: '#f8fafc',
+                                        background: 'var(--glass-bg)',
                                         padding: '1rem',
                                         borderRadius: '12px',
                                         marginTop: '1rem'

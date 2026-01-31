@@ -106,12 +106,13 @@ const MentalHealth = () => {
                         <div key={msg.id} style={{
                             alignSelf: msg.sender === 'user' ? 'flex-end' : 'flex-start',
                             maxWidth: '80%',
-                            background: msg.sender === 'user' ? 'var(--primary)' : '#f1f5f9',
+                            background: msg.sender === 'user' ? 'var(--primary)' : 'var(--glass-bg)',
                             color: msg.sender === 'user' ? 'white' : 'var(--text-main)',
                             padding: '1rem',
                             borderRadius: '20px',
                             borderBottomRightRadius: msg.sender === 'user' ? '4px' : '20px',
                             borderTopLeftRadius: msg.sender === 'ai' ? '4px' : '20px',
+                            border: msg.sender === 'ai' ? '1px solid var(--glass-border)' : 'none'
                         }}>
                             {msg.text}
                         </div>
@@ -124,13 +125,13 @@ const MentalHealth = () => {
                     )}
                 </div>
 
-                <form onSubmit={handleSend} style={{ padding: '1rem', background: 'white', borderTop: '1px solid #e2e8f0', display: 'flex', gap: '0.5rem' }}>
+                <form onSubmit={handleSend} style={{ padding: '1rem', background: 'var(--glass-bg)', borderTop: '1px solid var(--glass-border)', display: 'flex', gap: '0.5rem' }}>
                     <input
                         type="text"
                         placeholder="Type your feelings..."
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
-                        style={{ flex: 1, padding: '0.8rem', borderRadius: '99px', border: '1px solid #e2e8f0', outline: 'none' }}
+                        style={{ flex: 1, padding: '0.8rem', borderRadius: '99px', border: '1px solid var(--glass-border)', outline: 'none' }}
                     />
                     <button type="submit" className="btn btn-primary" style={{ padding: '0.8rem', borderRadius: '50%' }}>
                         <Send size={20} />

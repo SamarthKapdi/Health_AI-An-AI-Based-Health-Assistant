@@ -46,12 +46,12 @@ const Navbar = () => {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        background: 'rgba(255, 255, 255, 0.8)',
+        background: 'var(--glass-bg)',
         backdropFilter: 'blur(12px)',
         borderRadius: '24px',
         padding: '0.75rem 1.5rem',
         boxShadow: '0 4px 30px rgba(0, 0, 0, 0.05)',
-        border: '1px solid rgba(255, 255, 255, 0.3)'
+        border: '1px solid var(--glass-border)'
       }}>
         <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <div style={{ background: 'var(--primary)', padding: '6px', borderRadius: '12px', color: 'white' }}>
